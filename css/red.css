@@ -1,0 +1,33 @@
+body {
+    background: url('../img/rojo.jpg');
+    /* background-color: rgb(255, 255, 255); */
+}
+
+.backtoup {
+    background-color: #E71D36;
+}
+
+#logo {
+    background-color: #E71D36;
+}
+
+#menu {
+    background-color: rgba(15, 15, 15,0.7);
+}
+
+#menu ul li:hover {
+    background-color: rgb(197, 70, 70);
+}
+
+.post .coment {
+    background-color: #E71D36;
+}
+
+.button-more {
+    background-color: #E71D36;
+    transition: all .3s ease-out;
+}
+
+.button-more:hover {
+    background-color: rgb(218, 64, 82);
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.css">
+    <!-- main style -->
+    <link rel="stylesheet" href="css/style.css">
+    <link id="theme" rel="stylesheet" href="css/sweet.css">
+    <title>Proyecto 1</title>
+</head>
+<body>
+
+    <section id="global">
+        <!-- cabecera -->
+        <header>
+            <div class="content-header">
+                <div id="logo">
+                    <h1>Proyecto JS</h1>
+                </div>
+                <div class="change-theme">
+                    <a href="#" id="sweet" class="sweet">sweet</a>
+                    <a href="#" id="red" class="red">rojo</a>
+                    <a href="#" id="dark" class="dark">dark</a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Reloj</a></li>
+                    <li><a href="#">Sobre mi</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- backToUp -->
+        <div class="backtoup">
+            <a href="#">Subir</a>
+        </div>
+
+        <!-- slider -->
+        <div class="slider">
+            <div class="bxslider">
+                <div><img src="img/cielo.jpg" title="Funky roots"></div>
+                <div><img src="img/hojas.jpg" title="The long and winding road"></div>
+                <div><img src="img/rojo.jpg" title="Happy trees"></div>
+            </div>
+        </div>
+
+        <!-- contenido -->
+        <section id="content">
+            <div id="posts"></div>
+            <aside id="sidebar">
+                <div id="about">
+                    <h4><span>Quien soy?</span></h4>
+                    <img src="img/caracol.jpg">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eos quae ducimus a illum.</p>
+                </div>
+                <div id="login">
+                    <h4><span>Identificate</span></h4>
+                    <form>
+                        <label for="name">Nombre</label>
+                        <input type="text" name="form_name" id="form_name" placeholder="Ingrese su nombre">
+                        <label for="email">Correo</label>
+                        <input type="email" name="form_email" id="form_email" placeholder="Ingrese su correo">
+                        <label for="password">Password</label>
+                        <input type="password" name="form_password" id="form_password" placeholder="Cree una password">
+
+                        <input type="submit" id="btn-enviar" value="Crear">
+                    </form>
+                </div>
+            </aside>
+            <div class="clearfix"></div>
+        </section>
+    </section>
+
+    <footer>
+        Master en JS papa
+    </footer>
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

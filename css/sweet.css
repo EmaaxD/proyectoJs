@@ -1,0 +1,28 @@
+body {
+    /* background: url('../img/hojas.jpg'); */
+    background-color: rgb(255, 255, 255);
+}
+
+.backtoup {
+    background-color: #5FB0B7;
+}
+
+#logo {
+    background-color: #5FB0B7;
+}
+
+#menu {
+    background-color: rgba(15, 15, 15,0.7);
+}
+
+#menu ul li:hover {
+    background-color: rgb(79, 172, 180);
+}
+
+.post .coment {
+    background-color: #5FB0B7;
+}
+
+.button-more {
+    background-color: #5FB0B7;
+}

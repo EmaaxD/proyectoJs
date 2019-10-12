@@ -1,0 +1,33 @@
+body {
+    background: url('../img/dark.jpg');
+    /* background-color: rgb(255, 255, 255); */
+}
+
+.backtoup {
+    background-color: #AF2BBF;
+}
+
+#logo {
+    background-color: #AF2BBF;
+}
+
+#menu {
+    background-color: rgba(15, 15, 15,0.7);
+}
+
+#menu ul li:hover {
+    background-color: rgb(195, 71, 185);
+}
+
+.post .coment {
+    background-color: #AF2BBF;
+}
+
+.button-more {
+    background-color: #AF2BBF;
+    transition: all .3s ease-out;
+}
+
+.button-more:hover {
+    background-color: rgb(218, 64, 82);
+}
