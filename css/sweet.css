@@ -35,3 +35,11 @@ body {
     margin-top: 5px;
     cursor: pointer;
 }
+
+#reloj > div {
+    border: 1px solid grey;
+    padding: 18px;
+    background-color: #5FB0B7;
+    color: white;
+    border-radius: 5px;
+}

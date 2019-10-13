@@ -238,4 +238,23 @@ $(document).ready(function () {
         boxLogin.fadeIn()
         relleno.fadeIn()
     })
+
+    if (this.location.href.indexOf('about') > -1) {
+        //acordeo
+        $('#acordeon').accordion()
+    }
+
+    if (this.location.href.indexOf('reloj') > -1) {
+        setInterval(() => {
+            let hora = moment().format('hh')
+            let minutos = moment().format('mm')
+            let segundos = moment().format('ss')
+
+            $('#reloj #hora').html(hora)
+            $('#reloj #minuto').html(minutos)
+            $('#reloj #segundo').html(segundos)
+
+        }, 1000);
+    }
+    
 })

@@ -228,3 +228,25 @@ footer {
     line-height: 47px;
     text-align: center;
 }
+
+#box {
+    width: 60%;
+    float: left;
+    margin-top: 30px;
+}
+
+#acordeon {
+    margin-top: 20px;
+}
+
+#reloj {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    /* border: 1px dashed black; */
+    width: 50%;
+    padding: 30px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
