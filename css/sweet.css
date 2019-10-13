@@ -26,3 +26,12 @@ body {
 .button-more {
     background-color: #5FB0B7;
 }
+
+.btn-salir {
+    background-color: #5FB0B7;
+    color: white;
+    padding: 10px;
+    border: none;
+    margin-top: 5px;
+    cursor: pointer;
+}

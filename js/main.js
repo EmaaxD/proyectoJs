@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
-    /*Funciones*/
+    /**FUNCIONES**/
+
     const minifyContet = text => {
         let cantidadPermitida = 120
         let cadena
@@ -45,7 +46,6 @@ $(document).ready(function () {
         const style_defined = style
 
         if (localStorage) {
-            localStorage.clear()
             localStorage.setItem('theme',style_defined)
         }
 
@@ -62,9 +62,28 @@ $(document).ready(function () {
         theme_select.addClass('active-theme')
     }
 
-    const saveDataForm = ({name,value}) => {
-        if (value != '') {
-            localStorage.setItem(name,value)
+    const saveDataForm = ({nick,email,password}) => {
+        let devolver = ''
+
+        if (nick != '' && email != '' && password != '') {
+           if (password.length <= 3) {
+            Swal.fire({
+                type:'error',
+                title:'Oops',
+                text:'La contra necesita mas caracteres'
+            })
+           }else{
+               let saveDataUserStorage = {
+                   'nick': nick,
+                   'email': email
+               }
+
+               localStorage.setItem('dataUser',JSON.stringify(saveDataUserStorage))
+
+               devolver = 'success'
+
+               return devolver
+           }
         }else{
             // let inputError = $(`#${name}`)
 
@@ -82,6 +101,28 @@ $(document).ready(function () {
             console.log(`campo ${name} no puede estar vacio`)
         }
     }
+
+    const showDataUser = ({nick,email}) => {
+        const boxDataUser = $('#data-user')
+        const relleno = $('#relleno')
+        const boxLogin = $('#login')
+
+        if (nick != null && email != null) {
+            console.log('tiene datos')
+            relleno.fadeOut()
+            boxDataUser.fadeIn()
+            boxLogin.fadeOut()
+        
+            $('#data-user h3').append(nick)
+            $('#data-user p').append(email)
+        }else{
+            console.log('no tiene datos')
+        }
+
+        
+    }
+
+    /**FIN FUNCIONES**/
 
     //slider 
     $('.bxslider').bxSlider({
@@ -155,12 +196,46 @@ $(document).ready(function () {
 	});
 
     //login false
+    const boxDataUser = $('#data-user')
+    let dataUser = JSON.parse(localStorage.getItem('dataUser'))
+    boxDataUser.hide()
+    
+    if (dataUser != null) {
+        showDataUser(dataUser)
+    }
+
     $('#login form').on('submit', function (event) {
         event.preventDefault()
-        let boxLogin = $('#login')
-        const datas = $(this).serializeArray()
+        const boxLogin = $('#login')
+        const data = $(this).serializeArray()
+        console.log(data)
+        const datasUser = {
+            'nick': data[0].value,
+            'email':data[1].value,
+            'password': data[2].value
+        }
 
-        datas.map(data => saveDataForm(data))
-        // boxLogin.fadeOut()
+        const saveData = saveDataForm(datasUser)
+        if (saveData == 'success') {
+            boxLogin.fadeOut()
+
+            let getDataUser = JSON.parse(localStorage.getItem('dataUser'))
+            showDataUser(getDataUser)
+        }
+    })
+
+    //cerrar sesion
+    $('#cerra_sesion').on('click', function () {
+        const boxLogin = $('#login')
+        const boxDataUser = $('#data-user')
+        const relleno = $('#relleno')
+        const formLogin = $('#login form')
+
+        localStorage.removeItem('dataUser')
+        formLogin[0].reset()
+
+        boxDataUser.fadeOut()
+        boxLogin.fadeIn()
+        relleno.fadeIn()
     })
 })

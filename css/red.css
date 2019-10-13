@@ -31,3 +31,12 @@ body {
 .button-more:hover {
     background-color: rgb(218, 64, 82);
 }
+
+.btn-salir {
+    background-color: #E71D36;
+    color: white;
+    padding: 10px;
+    border: none;
+    margin-top: 5px;
+    cursor: pointer;
+}

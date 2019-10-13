@@ -29,5 +29,14 @@ body {
 }
 
 .button-more:hover {
-    background-color: rgb(218, 64, 82);
+    background-color: rgb(204, 61, 192);
+}
+
+.btn-salir {
+    background-color: #AF2BBF;
+    color: white;
+    padding: 10px;
+    border: none;
+    margin-top: 5px;
+    cursor: pointer;
 }
