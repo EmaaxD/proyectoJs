@@ -7,6 +7,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.theme.min.css">
     <!-- main style -->
     <link rel="stylesheet" href="css/style.css">
     <link id="theme" rel="stylesheet" href="css/sweet.css">
@@ -44,18 +47,35 @@
             <a href="#">Subir</a>
         </div>
 
-        <!-- slider -->
-        <div class="slider">
-            <div class="bxslider">
-                <div><img src="img/cielo.jpg" title="Funky roots"></div>
-                <div><img src="img/hojas.jpg" title="The long and winding road"></div>
-                <div><img src="img/rojo.jpg" title="Happy trees"></div>
-            </div>
-        </div>
 
         <!-- contenido -->
         <section id="content">
-            <div id="posts"></div>
+            <div id="box">
+                <form id="form-contact">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name" placeholder="Nombre..." data-validation="alphanumeric">
+
+                    <label for="lastname">Apellido</label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Apellido..." data-validation="alphanumeric">
+
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" placeholder="Correo..." data-validation="email">
+
+                    <label for="man">Hombre</label>
+                    <input type="radio" name="sexo" id="man" value="man" data-validation="required">
+
+                    <label for="woman">Mujer</label>
+                    <input type="radio" name="sexo" id="woman" value="woman" data-validation="required"><br><br>
+
+                    <label for="dataOfBirth">Fecha de nacimiento</label>
+                    <input type="text" name="dataOfBirth" id="dataOfBirth" placeholder="Fecha de nacimiento..." data-validation="date" data-validation-format="dd/mm/yyyy">
+
+                    <label for="age">Edad</label>
+                    <input type="number" min="18" name="age" id="age" placeholder="Edad..." data-validation="number">
+
+                    <input type="submit" value="Contactar">
+                </form>
+            </div>
             <aside id="sidebar">
                 <div id="about">
                     <h4><span>Quien soy?</span></h4>
@@ -90,10 +110,12 @@
     </footer>
     
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

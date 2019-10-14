@@ -239,11 +239,12 @@ $(document).ready(function () {
         relleno.fadeIn()
     })
 
+    //acordeo
     if (this.location.href.indexOf('about') > -1) {
-        //acordeo
         $('#acordeon').accordion()
     }
 
+    //reloj
     if (this.location.href.indexOf('reloj') > -1) {
         setInterval(() => {
             let hora = moment().format('hh')
@@ -256,5 +257,18 @@ $(document).ready(function () {
 
         }, 1000);
     }
+
+    //validacion de contacto
+    if(this.location.href.indexOf('contact') > -1){
+        $('#dataOfBirth').datepicker({
+            dateFormat: 'dd/mm/yy'
+        })
+        $.validate({
+            lang:'es',
+            errorMessagePosition: 'top',
+            scrollToTop:true
+        })
+    }
+
     
 })
